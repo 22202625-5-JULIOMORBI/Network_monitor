@@ -42,9 +42,9 @@ pip install -r requirements.txt
 Inicialize o banco de dados:
 
 python
->>> from app import db
->>> db.create_all()
->>> exit()
+from app import db
+db.create_all()
+exit()
 
 Inicie o servidor:
 
