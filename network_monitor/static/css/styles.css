@@ -1,0 +1,66 @@
+body {
+    background-color: #f9fafb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.status-card {
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Ícone inicialmente invisível */
+.status-icon-container {
+    position: absolute;
+    left: -100px; /* Ícone fora da tela */
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+    transition: all 1s ease-in-out;
+}
+
+/* Ícone ao lado após surgir */
+.status-icon-container.show-icon {
+    left: 30px; /* Posicionamento fixo do ícone */
+    opacity: 1;
+}
+
+.status-icon {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+/* Detalhes do status (texto) */
+.status-details {
+    text-align: center; /* Centralizado inicialmente */
+    transition: transform 1s ease-in-out;
+}
+
+/* Movendo o texto para a direita */
+.status-details.move-right {
+    transform: translateX(50px); /* Movimento um pouco maior para a direita */
+    text-align: left; /* Alinha à esquerda após mover */
+}
+
+.card-title {
+    font-size: 1.8rem; /* Mantém original */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1.2rem; /* Mantém original */
+    color: #555;
+    margin: 5px 0;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="mb-4 text-center">Monitoramento em Tempo Real</h1>
+
+<div class="row g-4">
+    {% for address in addresses %}
+    <div class="col-md-4">
+        <div class="card status-card shadow-sm">
+            <div class="card-body d-flex align-items-center justify-content-center">
+                <!-- Ícone Animado -->
+                <div class="status-icon-container" id="icon-container-{{ address.id }}">
+                    <img src="{{ url_for('static', filename='icons/connection_online.gif') }}" 
+                         alt="Online" class="status-icon" id="icon-online-{{ address.id }}" style="display: none;">
+                    <img src="{{ url_for('static', filename='icons/connection_offline.gif') }}" 
+                         alt="Offline" class="status-icon" id="icon-offline-{{ address.id }}" style="display: none;">
+                    <img src="{{ url_for('static', filename='icons/connection_unstable.gif') }}" 
+                         alt="Instável" class="status-icon" id="icon-unstable-{{ address.id }}" style="display: none;">
+                </div>
+                <!-- Informações -->
+                <div class="status-details text-center" id="details-{{ address.id }}">
+                    <h5 class="card-title">{{ address.name }}</h5>
+                    <p class="card-text mb-1"><strong>Endereço:</strong> {{ address.address }}</p>
+                    <p class="card-text"><strong>Porta:</strong> {{ address.port }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

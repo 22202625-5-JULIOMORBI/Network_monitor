@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ 'Adicionar' if mode == 'add' else 'Editar' }} Endereço</h1>
+<form method="post">
+    <div class="mb-3">
+        <label for="name" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ address.name if address else '' }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="address" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="address" name="address" value="{{ address.address if address else '' }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="port" class="form-label">Porta</label>
+        <input type="number" class="form-control" id="port" name="port" value="{{ address.port if address else '' }}" required>
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

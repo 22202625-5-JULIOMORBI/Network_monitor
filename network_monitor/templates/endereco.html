@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Endereços Monitorados</h1>
+<a href="{{ url_for('add') }}" class="btn btn-primary mb-3">Adicionar Endereço</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Porta</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for address in addresses %}
+        <tr>
+            <td>{{ address.name }}</td>
+            <td>{{ address.address }}</td>
+            <td>{{ address.port }}</td>
+            <td>
+                <a href="{{ url_for('edit', id=address.id) }}" class="btn btn-warning btn-sm">Editar</a>
+                <form action="{{ url_for('delete', id=address.id) }}" method="post" style="display:inline-block;">
+                    <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
