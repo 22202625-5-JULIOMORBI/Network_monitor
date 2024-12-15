@@ -92,5 +92,5 @@ Envie um pull request explicando suas mudanças.
 📄 Licença
 Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais informações.
 
-Desenvolvedor: Seu Nome
+Dev: Julio Morbi
 📧 Contato: juliomorbi@gmail.com
