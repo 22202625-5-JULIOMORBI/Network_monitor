@@ -53,21 +53,21 @@ Acesse a aplicação no navegador em http://127.0.0.1:5000.
 
 📂 Estrutura do Projeto
 
-├── app.py               # Arquivo principal da aplicação
-├── models.py            # Modelos para o banco de dados
-├── templates/           # Arquivos HTML para renderização
-│   ├── base.html        # Template base
-│   ├── monitor.html     # Página principal de monitoramento
-│   ├── endereco.html    # Gerenciamento de endereços
-│   ├── add_edit.html    # Formulário de adicionar/editar
-├── static/              # Arquivos estáticos
-│   ├── css/
-│   │   └── styles.css   # Estilo personalizado
-│   ├── js/
-│   │   └── script.js    # Atualizações de status em tempo real
-│   └── icons/           # Ícones para status
-├── requirements.txt     # Dependências do projeto
-└── README.md            # Este arquivo
+app.py               # Arquivo principal da aplicação
+models.py            # Modelos para o banco de dados
+templates/           # Arquivos HTML para renderização
+base.html        # Template base
+monitor.html     # Página principal de monitoramento
+endereco.html    # Gerenciamento de endereços
+add_edit.html    # Formulário de adicionar/editar
+tatic/              # Arquivos estáticos
+css/
+styles.css   # Estilo personalizado
+js/
+script.js    # Atualizações de status em tempo real
+icons/           # Ícones para status
+requirements.txt     # Dependências do projeto
+README.md            # Este arquivo
 
 🎨 Ícones de Status
 
