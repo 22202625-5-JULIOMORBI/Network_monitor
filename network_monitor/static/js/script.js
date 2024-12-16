@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch((error) => console.error("Erro ao atualizar status:", error));
     }
 
-    // Atualiza os status a cada 15 segundos
+    // Atualiza os status a cada 30 segundos
     setInterval(updateStatuses, 30000);
 
     // Chama uma vez no carregamento inicial
